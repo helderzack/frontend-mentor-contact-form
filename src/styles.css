@@ -16,4 +16,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Karla';
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/static/Karla-Regular.ttf') format('truetype');
 }

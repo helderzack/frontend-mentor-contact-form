@@ -55,11 +55,6 @@ button {
     gap: 8px;
 }
 
-input[type="radio"] {
-    margin: 0;
-    padding: 0;
-}
-
 .small-item {
     width: 50%;
 }
