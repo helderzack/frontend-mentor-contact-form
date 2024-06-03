@@ -1,22 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    --primary-lighter: hsl(148, 38%, 91%);
-    --primary-medium: hsl(169, 82%, 27%);
-    --error: hsl(0, 66%, 54%);
-    --neutral-white: hsl(0, 0%, 100%);
-    --neutral-medium: hsl(186, 15%, 59%);
-    --neutral-darker: hsl(187, 24%, 22%)
+    --light-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --medium-grey: hsl(186, 15%, 59%);
+    --dark-grey: hsl(187, 24%, 22%)
 }
 
 body {
-    background-color: var(--primary-lighter);
-    height: 100vh;
-    width: 100%;
-    margin: 0;
+    background-color: var(--light-green);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Karla';
+    font-family: 'Karla', sans-serif;
 }
 
 @font-face {

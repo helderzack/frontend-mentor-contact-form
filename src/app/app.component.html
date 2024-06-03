@@ -1,42 +1,55 @@
-<form class="contact-form">
-  <h1>Contact Us</h1>
-  <div class="row-container">
+<div class="contact-form">
 
-    <div class="col-container small-item">
-      <label for="first-name" class="label-default">First Name</label>
-      <input type="text" name="first-name" class="input-default">
+  <form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <h1>Contact Us</h1>
+
+    <div class="form-item">
+      <div class="first-name">
+        <label for="first-name">First Name<span class="required-input"> *</span></label>
+        <input type="text" id="first-name" name="first-name">
+        <!-- <p class="form-alert">This field is required</p> -->
+      </div>
+      <div class="last-name">
+        <label for="last-name">Last Name<span class="required-input"> *</span></label>
+        <input type="text" id="last-name" name="last-name">
+        <!-- <p class="form-alert">This field is required</p> -->
+      </div>
     </div>
 
-    <div class="col-container small-item">
-      <label for="last-name" class="label-default">Last Name</label>
-      <input type="text" name="last-name" class="input-default">
+    <div class="form-item">
+      <label for="email-address">Email Address<span class="required-input"> *</span></label>
+      <input type="email" id="email-address" name="address">
+      <!-- <p class="form-alert">This field is required</p> -->
     </div>
 
-  </div>
+    <div class="form-item">
+      <label for="query-type">Query type<span class="required-input"> *</span></label>
+      <div class="radio-inputs">
+        <div class="radio-options">
+          <input type="radio" id="general-enquiry" name="general-enquiry" value="Genereal Enquiry">
+          <label for="general-enquiry">General Enquiry</label>
+        </div>
+        <div class="radio-options">
+          <input type="radio" id="support-request" name="support-request" value="Support Request">
+          <label for="support-request">Support Request</label>
+        </div>
+      </div>
 
-  <div class="col-container">
-    <label for="email-adress" class="label-default">Email Address</label>
-    <input type="email" name="email-adress" class="input-default ">
-  </div>
+      <!-- <p class="form-alert">Please select a query type</p> -->
+    </div>
 
-  <label class="label-default">Query Type</label>
-  <div class="row-container">
-    <div class="input-default small-item row-container">
-      <input type="radio" name="query-type" value="general-enquiry" id="general-enquiry">
-      <label for="general-enquiry">General Enquiry</label>
+    <div class="form-item">
+      <label for="message">Message<span class="required-input"> *</span></label>
+      <textarea name="message" id="message" rows="4"></textarea>
+      <!-- <p class="form-alert">This field is required</p> -->
     </div>
-    <div class="input-default small-item row-container">
-      <input type="radio" name="query-type" value="support-request" id="support-request">
-      <label for="support-request">Support Request</label>
+
+    <div class="form-item">
+      <input type="checkbox" name="consent" id="consent">
+      <label for="consent">I consent to being contacted by the team<span class="required-input"> *</span></label>
     </div>
-  </div>
-  <div class="col-container">
-    <label for="message" class="label-default">Message</label>
-    <textarea name="message" id="" rows="5" class="input-default"></textarea>
-  </div>
-  <div class="row-container">
-    <input type="checkbox" name="consent" class="input-default" id="consent">
-    <label for="consent" class="label-default">I consent to being contacted by the team</label>
-  </div>
-  <button type="submit">Submit</button>
-</form>
+    <!-- <p class="form-alert">To submit this form, please consent to being contacted</p> -->
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
